@@ -28,7 +28,6 @@ module.exports = () => {
         short_name: 'PWA',
         description: 'A quick single page text editor!',
         background_color: '#ffffff',
-        crossorigin: 'use-credentials',
         icons: [
           {
             src: path.resolve('src/images/logo.png'),
