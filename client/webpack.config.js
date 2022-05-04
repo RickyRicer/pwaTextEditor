@@ -20,10 +20,28 @@ module.exports = () => {
     plugins: [
       new HtmlWebpackPlugin({
         template: './index.html',
-        title: 'Webpack Plugin',
+        title: 'JATE',
       }),
-      new MiniCssExtractPlugin(),
-      new WorkboxPlugin.GenerateSW()
+
+      new WebpackPwaManifest({
+        name: 'Progressive Web App',
+        short_name: 'PWA',
+        description: 'A quick single page text editor!',
+        background_color: '#ffffff',
+        crossorigin: 'use-credentials',
+        icons: [
+          {
+            src: path.resolve('src/images/logo.png'),
+            sizes: [96, 128, 192, 256, 384, 512],
+            destination: path.join('assets', 'icons'),
+          },
+        ],
+      }),
+
+      new InjectManifest({
+        swSrc:'./src-sw.js',
+        swDest: './src-sw.js',
+      }),
     ],
 
     module: {
