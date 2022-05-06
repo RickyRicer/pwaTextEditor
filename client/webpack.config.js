@@ -24,10 +24,15 @@ module.exports = () => {
       }),
 
       new WebpackPwaManifest({
-        name: 'Progressive Web App',
-        short_name: 'PWA',
+        fingerprints: false,
+        inject: true,
+        name: 'Just Another Text Editor',
+        short_name: 'JATE',
         description: 'A quick single page text editor!',
-        background_color: '#ffffff',
+        background_color: "#225CA3",
+        theme_color: "#225CA3",
+        start_url: "/",
+        publicPath: "/",
         icons: [
           {
             src: path.resolve('src/images/logo.png'),
