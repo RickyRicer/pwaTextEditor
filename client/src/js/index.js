@@ -1,4 +1,6 @@
 import { Workbox } from 'workbox-window';
+import "core-js/stable";
+import "regenerator-runtime/runtime";
 import Editor from './editor';
 import './database';
 import '../css/style.css';
