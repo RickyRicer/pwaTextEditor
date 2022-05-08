@@ -70,4 +70,4 @@ Find us on GitHub: <br />[RickyRicer](https://github.com/RickyRicer)<br />
     
   
 <!-- MARKDOWN LINKS & IMAGES -->
-[product-screenshot]: assets/screenshot.png
+[product-screenshot]: Assets/screenshot.png
